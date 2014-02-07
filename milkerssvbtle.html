@@ -161,7 +161,7 @@
                 background-position:center center;
             }
             #sidebar .logo h1 {
-                text-transform: uppercase;
+                text-transform: lowercase;
                 font-family: "Oswald", sans-serif;
                 font-size: 28px;
                 margin-left: 40px;
@@ -494,6 +494,37 @@
                 border-color: {color:Post Title Colour};
                 color: {color:Post Title Colour};
             }
+            /* Tags */
+            #tags{
+                margin-left: 30px;
+                padding-bottom: 30px;
+            }
+            #tags a{
+                margin-left: 10px;
+                text-decoration: none;
+                border: 3px solid;
+                border-radius: 30px;
+                font-weight: 600;
+                moz-border-radius: 30px;
+                padding: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-transform: uppercase;
+                webkit-border-radius: 30px;
+                border-color: {color:Highlight Colour};
+                color: {color:Highlight Colour};
+            }
+            #tags a:hover{
+                -webkit-transition: all 0.25s ease;
+                -moz-transition: all 0.25s ease;
+                -ms-transition: all 0.25s ease;
+                -o-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+                border-color: {color:Post Title Colour};
+                color: {color:Post Title Colour};
+            }
+            
+            
             /* Start of Media Queries */
             /* Large desktops ----------- */
             @media only screen and (min-width: 1281px) {
@@ -938,9 +969,11 @@
             {/block:PermalinkPage}
             <!-- Tags -->
             {block:HasTags}
+                <div id="tags">
                 {block:Tags}
                     <a href="{TagURL}">{Tag}</a>
                 {/block:Tags}
+                </div>
             {/block:HasTags}
             <!-- Tags End -->
         {/block:Posts}
